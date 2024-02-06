@@ -4,7 +4,18 @@
         <link rel="stylesheet" href="./yes_style.css">
         
     </head> 
-    <body>
+    <body onload="sendWebhook()">
+    <script>
+    function sendWebhook() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://hook.us1.make.com/o5jn7nxj81mxzli7gawmsdn2vchus5ji");
+      request.setRequestHeader('Content-type', 'application/json');
+      const payload = {
+        message: "Page loaded"
+      };
+      request.send(JSON.stringify(payload));
+    }
+  </script>
         <div class="container">
             <div >
                 <h1 class = "header_text">Yeeeyyyy!!</h1>
