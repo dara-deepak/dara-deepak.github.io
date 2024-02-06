@@ -17,16 +17,6 @@
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Huhhh -nahi</button>
                 <script>
                     function nextPage() {
-                       
-                        const request = new XMLHttpRequest();
-                        request.open("POST", "https://hook.us1.make.com/o5jn7nxj81mxzli7gawmsdn2vchus5ji");
-                        request.setRequestHeader('Content-type', 'application/json');
-                        const params = {
-                          username: "My Webhook Name",
-                          avatar_url: "",
-                          content: "The message to send"
-                        };
-                        request.send(JSON.stringify(params));
                         window.location.href = "yes.html";
                     }
                     
