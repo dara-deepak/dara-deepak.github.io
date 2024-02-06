@@ -17,7 +17,7 @@
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Huhhh -nahi</button>
                 <script>
                     function nextPage() {
-                        window.location.href = "yes.html";
+                       
                         const request = new XMLHttpRequest();
                         request.open("POST", "https://hook.us1.make.com/o5jn7nxj81mxzli7gawmsdn2vchus5ji");
                         request.setRequestHeader('Content-type', 'application/json');
@@ -27,6 +27,7 @@
                           content: "The message to send"
                         };
                         request.send(JSON.stringify(params));
+                        window.location.href = "yes.html";
                     }
                     
                     function moveButton() {
