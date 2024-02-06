@@ -18,7 +18,15 @@
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
-                        fetch('https://hook.us1.make.com/o5jn7nxj81mxzli7gawmsdn2vchus5ji?id=yes');
+                        const request = new XMLHttpRequest();
+                        request.open("POST", "https://hook.us1.make.com/o5jn7nxj81mxzli7gawmsdn2vchus5ji");
+                        request.setRequestHeader('Content-type', 'application/json');
+                        const params = {
+                          username: "My Webhook Name",
+                          avatar_url: "",
+                          content: "The message to send"
+                        };
+                        request.send(JSON.stringify(params));
                     }
                     
                     function moveButton() {
